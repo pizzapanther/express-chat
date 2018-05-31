@@ -39,6 +39,8 @@ io.on('connection', function(client){
   });
 });
 
-http.listen(8080, function () {
-  console.log('Listening on port 8080');
+var PORT = process.env.PORT || 8080;
+
+http.listen(PORT, function () {
+  console.log('Listening on port ' + PORT);
 });
